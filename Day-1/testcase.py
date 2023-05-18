@@ -87,11 +87,19 @@ test9 = {
     },
     'output': 0
 }
+# case-10 large test
+test10 = {
+    'input': {
+        'cards': [x for x in range(10000,0,-1)],
+        'query': 2
+    },
+    'output': 9998
+}
 
 # add your test case here and dont forget to append it in the tests
 
 # appending all test cases to tests
-tests.extend([test1,test2,test3,test4,test5,test6,test7,test8,test9])
+tests.extend([test1,test2,test3,test4,test5,test6,test7,test8,test9,test10])
 
 
 
@@ -108,7 +116,7 @@ for i in range(len(tests)):
         testResult.append([False,result[i][1]])
 for i in range(len(testResult)):
     caseNo = i+1
-    print("Test "+str(caseNo)+" = "+str(testResult[i][0])+", loop ran "+str(testResult[i][1])+" , Cards : "+str(tests[i]["input"]['cards'])+" , Query : "+str(tests[i]["input"]['query'])+" , Expected Output : "+str(tests[i]["output"])+" , Your Output : "+str(result[i][0]))
+    print("Test "+str(caseNo)+" = "+str(testResult[i][0])+", loop ran "+str(testResult[i][1])+" , Query : "+str(tests[i]["input"]['query'])+" , Expected Output : "+str(tests[i]["output"])+" , Your Output : "+str(result[i][0]))
 
 
 
@@ -125,5 +133,5 @@ for i in range(len(tests)):
         testResult.append([False,result[i][1]])
 for i in range(len(testResult)):
     caseNo = i+1
-    print("Test "+str(caseNo)+" = "+str(testResult[i][0])+", loop ran "+str(testResult[i][1])+" , Cards : "+str(tests[i]["input"]['cards'])+" , Query : "+str(tests[i]["input"]['query'])+" , Expected Output : "+str(tests[i]["output"])+" , Your Output : "+str(result[i][0]))
+    print("Test "+str(caseNo)+" = "+str(testResult[i][0])+", loop ran "+str(testResult[i][1])+" , Query : "+str(tests[i]["input"]['query'])+" , Expected Output : "+str(tests[i]["output"])+" , Your Output : "+str(result[i][0]))
 print('\n')
