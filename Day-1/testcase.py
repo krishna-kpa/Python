@@ -79,11 +79,19 @@ test8 = {
     },
     'output': 2
 }
+# case-9 card occurs left of array
+test9 = {
+    'input': {
+        'cards': [8, 8, 6, 6, 6, 6, 6, 6, 3, 2, 2, 2, 0, 0, 0],
+        'query': 8
+    },
+    'output': 0
+}
 
 # add your test case here and dont forget to append it in the tests
 
 # appending all test cases to tests
-tests.extend([test1,test2,test3,test4,test5,test6,test7,test8])
+tests.extend([test1,test2,test3,test4,test5,test6,test7,test8,test9])
 
 
 
